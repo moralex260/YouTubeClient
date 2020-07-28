@@ -1,0 +1,18 @@
+.header{
+  height: 300px;
+  background-color: violet;
+  border: black 1px;
+display: flex;
+}
+.headerH{
+ font-size: 50px;
+  color: blue;
+}
+.headerButton{
+  height: 100px;
+  width: 200px;
+  border: rebeccapurple;
+  background-color: red;
+  position: center;
+  border-radius: 20px;
+}
