@@ -11,10 +11,10 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router) {
   }
 
-  ngOnInit(): void {
+public ngOnInit(): void {
   }
 
-  goToMenu(): void {
+ public goToMenu(): void {
     this.router.navigate(['menu']);
   }
 }

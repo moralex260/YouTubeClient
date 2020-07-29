@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-header-menu',
@@ -7,11 +8,14 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class HeaderMenuComponent implements OnInit {
   @Input()
- arr = ['item1', 'item2', 'item3'];
-  id: number;
-  constructor() { }
+  public id: number;
+  public arr: [string, string, string] = ['item1', 'item2', 'item3'];
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+ public ngOnInit(): void {
   }
 
+   public goToItem(): void {
+this.router.navigate(['request', this.id]);
+  }
 }

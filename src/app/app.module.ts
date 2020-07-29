@@ -8,7 +8,9 @@ import { RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import { HeaderMenuComponent } from './components/header-menu/header-menu.component';
 const routes: Routes = [{path: '' , component: HeaderComponent , children:
- [{path: 'menu' , component: HeaderMenuComponent}]}];
+ [{path: 'menu' , component: HeaderMenuComponent}]},
+  {path: 'request/:id', loadChildren: () => import('./requests-from-youtube/requests-from-youtube.module')
+      .then(m => m.RequestsFromYoutubeModule)}];
 @NgModule({
   declarations: [
     AppComponent,
